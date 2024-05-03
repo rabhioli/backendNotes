@@ -111,7 +111,22 @@ app.post("/login", async (req, res) => {
       });
     }
   });
-
+//Get User
+app.get("/get-user", authenticateToken, async (req, res) => {
+    const { user } = req.user;
+  
+    const isUser = await User.findOne({ _id: user._id });
+  
+    if (!isUser) {
+      return res.sendStatus(401);
+    }
+  
+    return res.json({
+      user: isUser,
+      message: "",
+    });
+  });
+  
   // add note
   app.post("/add-note", authenticateToken, async (req, res) => {
     const { title, content, tags } = req.body;
