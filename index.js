@@ -26,8 +26,7 @@ app.get("/", (req, res) => {
   res.json({ data: "hello" });
 });
 
-// Add your secret key here
-const secretKey = process.env.ACCESS_TOKEN_SECRET;
+
 
 // Create Account
 app.post("/create-account", async (req, res) => {

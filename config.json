@@ -1,3 +1,3 @@
 {
-    "connectionString": "mongodb+srv://rabhioli:Compelling22@cluster0.pza9zad.mongodb.net/capNotes?retryWrites=true&w=majority"
-}
+    "connectionString":"mongodb+srv://testuser:testuser123@notesdb.klvx0fk.mongodb.net/?retryWrites=true&w=majority&appName=notesdb"
+} 
